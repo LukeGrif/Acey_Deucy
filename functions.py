@@ -50,11 +50,7 @@ def acey_deucy_ui():
     while True:
         event, values = window.read()
         if event == sg.WINDOW_CLOSED or event == "Cash Out":
-            if cash > 100:
-                sg.popup("See you again soon!!")
-            elif cash == 100:
-                sg.popup("Get out while ur Even!! Good Lad")
-            else:
+            if cash < 100:
                 sg.popup("The House Always WINS!!")
             break
         if event == "Deal":
